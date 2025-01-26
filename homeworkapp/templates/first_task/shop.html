@@ -1,0 +1,25 @@
+{%extends 'menu.html'%}
+
+
+
+{%block pagename%}
+    <h1>Витрина</h1>
+{% endblock %}
+    <nav>
+        {% block menu%}
+        <ul>
+            <a href="/main/"><h2>Главная</h2></a>
+        </ul>
+        {%endblock%}
+    </nav>
+{%block content%}
+    <ul>
+        {%for i in list%}
+        <p><li>{{i.title}} | {{i.description}} | Стоимость: {{i.cost}}₽<button>Купить</button></li></p>
+        {%endfor%}
+    </ul>
+    <button><a href="/main/cart/"><h2>Перейти в корзину</h2></a></button>
+{%endblock%}
+
+
+
