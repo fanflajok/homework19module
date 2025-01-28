@@ -1,0 +1,16 @@
+{%extends 'menu.html'%}
+
+{%block pagename%}
+    <h1>Корзина</h1>
+{% endblock %}
+    <nav>
+        {% block menu%}
+        <ul>
+            <a href="/main/"><h2>Главная</h2></a>
+        </ul>
+        {%endblock%}
+    </nav>
+{%block content%}
+    <h4>Извините, ваша корзина пуста.
+        <a href="/main/shop/"><h4>Хотите вернуться к витрине?</h4></a></h4>
+{%endblock%}

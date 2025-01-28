@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}
+        Магазин Nintendo Россия
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header>
+        {%block pagename%}
+        <h1>Title</h1>
+        {% endblock %}
+    </header>
+    <nav>
+        {% block menu%}
+        <ul>
+            <a href="/main/"><h2>Главная</h2></a>
+            <a href="/main/registration/"><h2>Регистрация</h2></a>
+            <a href="/main/shop/"><h2>Магазин</h2></a>
+            <a href="/main/cart/"><h2>Корзина</h2></a>
+        </ul>
+        {%endblock%}
+    </nav>
+    <main>
+            {%block content%}
+          <p>Основной контент страницы</p>
+           {%endblock%}
+    </main>
+</body>
+</html>
